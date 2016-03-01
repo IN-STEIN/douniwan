@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">douniwan</string>
+    <string name="splash_text">手机自爆程序启动！</string>
+    <string name="进入应用">进入应用</string>
+    <!--<string name="click_to_enter">别点</string>-->
+    <string name="click_to_show">你瞅啥！</string>
+</resources>
