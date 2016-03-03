@@ -6,4 +6,6 @@
     <color name="splashBackgroundColor">#ffffff</color>
     <color name="splashTextColor">#ff3344</color>
     <color name="button2Color" >#ff3344</color>
+    <color name="blue">#070bdf</color>
+    <color name="white">#fff</color>
 </resources>

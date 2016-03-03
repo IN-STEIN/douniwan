@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "F:\\GE-VB\\AndroidStudioProjects\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "F:\\GE-VB\\AndroidStudioProjects\\MyApplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\GE-VB\\git\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\douniwan.jpg",
+        "source": "F:\\GE-VB\\git\\MyApplication\\app\\src\\main\\res\\mipmap-mdpi\\douniwan.jpg"
+    },
+    {
+        "merged": "F:\\GE-VB\\AndroidStudioProjects\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\douniwan.jpg",
+        "source": "F:\\GE-VB\\AndroidStudioProjects\\MyApplication\\app\\src\\main\\res\\mipmap-mdpi\\douniwan.jpg"
+    },
+    {
+        "merged": "F:\\GE-VB\\git\\MyApplication\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "F:\\GE-VB\\git\\MyApplication\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    }
+]

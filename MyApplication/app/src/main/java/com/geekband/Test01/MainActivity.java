@@ -3,8 +3,12 @@ package com.geekband.Test01;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,47 +22,76 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate:");
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //当被点击时弹出的消息
-                Toast.makeText(MainActivity.this, "--------你的手机在5秒后就会自爆!---------", Toast.LENGTH_LONG).show();
-            }
-        });
-        findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "--------把手机扔掉，乖!---------", Toast.LENGTH_LONG).show();
-            }
-        });
-        findViewById(R.id.button_forth).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //返回启动页
-//                Intent intent = new Intent(MainActivity.this, SplashActivity.class);
-//                startActivity(intent);
-            }
-        });
+
 
 
         findViewById(R.id.button_third).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this,SplashActivity.class);
-                intent.putExtra(SplashActivity.TITLE,"这是传回的字符串");
-                setResult(RESULT_CODE,intent);
-                finish();
+
+                Intent intent = new Intent(MainActivity.this, ListViewDemoActivity.class);
+                startActivity(intent);
+
             }
         });
+
+        EditText editText3 = (EditText) findViewById(R.id.editText);
+        editText3.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //长按事件
+                return false;
+            }
+        });
+
+        editText3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                Log.i(TAG, "s:" + s.toString() + ",start" + start + ",count" + count + ",after" + after);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Log.i(TAG, "s:" + s.toString() + ",start" + start + ",count" + count + ",before" + before);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                //超过或少于字数提示
+                if (s.toString().length() > 10 || s.toString().length() < 5) {
+                    Toast.makeText(MainActivity.this, "5-10字！", Toast.LENGTH_SHORT).show();
+
+                }
+                Log.i(TAG, "s:" + s.toString());
+            }
+
+        });
+
+
+        findViewById(R.id.seekBar).setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+
+            }
+        });
+
+
+
+
+
+
+
 
         //得到意图传过来的title
         Intent intent = getIntent();
         if(intent != null){
             String title = intent.getStringExtra(SplashActivity.TITLE);
-            String TopInfo = intent.getStringExtra(SplashActivity.USER_INFO);
+            UserInfo userInfo = (UserInfo) intent.getSerializableExtra(SplashActivity.USER_INFO);
 
-            setTitle(TopInfo);
+            setTitle(userInfo.getUserName());
         }
 
 

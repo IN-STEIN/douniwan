@@ -21,7 +21,6 @@ public class SplashActivity extends Activity {
     public static final int REQUEST_CODE = 9999;
     public static final String TAG = SplashActivity.class.getSimpleName();
     private TextView mTextView;
-    public static final String TopInfo = "这是ActionBar自定义内容";
     Handler mHandler = new Handler();
 
 
@@ -38,11 +37,12 @@ public class SplashActivity extends Activity {
             @Override
             public void run() {
 
+                UserInfo userInfo = new UserInfo("手机就要爆炸，你开不开心",12);
                 //跳转到MainActivity
                 Intent intent = new Intent(SplashActivity.this,MainActivity.class);
                 //意图将TITLE放在title这个容器内
                 intent.putExtra(TITLE,title);
-                intent.putExtra(USER_INFO,TopInfo);
+                intent.putExtra(USER_INFO,userInfo);
 
                 startActivityForResult(intent, REQUEST_CODE);
             }

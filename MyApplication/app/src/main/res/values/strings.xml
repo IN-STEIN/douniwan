@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">douniwan</string>
+    <string name="app_name">逗你玩一代目</string>
     <string name="splash_text">手机自爆程序启动！</string>
     <string name="进入应用">进入应用</string>
-    <!--<string name="click_to_enter">别点</string>-->
     <string name="click_to_show">你瞅啥！</string>
+    <string name="hello">hellohzlijiaqihzlijiaqihzljiaqi!</string>
+    <string name="hello1">欢迎作死小能手！</string>
+    <string name="phonebook">电话本</string>
 </resources>
